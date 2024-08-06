@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body oncontextmenu="custome_ContextMenu(event)">
+    <svg id="svg-guide">
+        <symbol id="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+            <path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083Z" clip-rule="evenodd" />
+        </symbol>
+        <symbol id="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+        </symbol>
+          
+    </svg>
+    <div id="custome-contextmenu">
+        <div class="custome-contextmenu-header">
+            SG
+        </div>
+        <ul class="custome-contextmenu-body">
+            <a href="">اشتراک گذاری</a>
+            <a href="">دانلود فایل رزومه</a>
+        </ul>
+        <div class="social-container">
+            <ul>
+                <li><a href="tel:09303494763" target="_blank"><i class="fa fa-phone"></i></a></li>
+                <li><a href="" target="_blank"><i class="fa fa-envelope-open-o"></i></a></li>
+                <li><a href="https://instagram/ssdf" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li><a href="" target="_blank"><i class="fa fa-telegram"></i></a></li>
+                <li><a href="" target="_blank"> <i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <span class="alert"></span>
+    <div class="main-content">
+        
+        
+        <!-- js creator ..... is a hover board container -->
+        <div class="container-hoverboard"></div>
+        <!--End js creator ..... is a hover board container -->
+
+        <div class="loader">
+            <img src="images/loading.gif" alt="">
+        </div>
+        <aside class="aside">
+            <a href="">SG</a>
+            <ul class="aside-ul">
+                <li onclick="pageChange(0)" class="active"><i class="fa fa-home"></i>خانه</li>
+                <li onclick="pageChange(1)"><i class="fa fa-question"></i>درباره من</li>
+                <li onclick="pageChange(2)"><i class="fa fa-user-o"></i>مهارت ها </li>
+                <li onclick="pageChange(3)"><i class="fa fa-briefcase"></i>نمونه کارها </li>
+                <li onclick="pageChange(4)"><i class="fa fa-phone"></i>ارتباط با من</li>
+            </ul>
+        </aside>
+        <article class="pages">
+            <div class="nav-toggle" onclick="nav_toggler()">
+                <span class="nav-toggle-span"></span>
+            </div>
+            <div class="change-color">
+                <div class="change-color-setting" onclick="Change_Color()">
+                    <i class="fa fa-cog"></i>
+                </div>
+                <div class="cange-color-pallet">
+                    <span onclick="Change_Color_CSS('red')" style="background : red"></span>
+                    <span onclick="Change_Color_CSS('blue')" style="background : rgb(0, 225, 255)"></span>
+                    <span onclick="Change_Color_CSS('purple')" style="background : rgb(240, 0, 240)"></span> 
+                    <span onclick="Change_Color_CSS('green')" style="background : rgb(0, 217, 0)"></span>
+                    <span onclick="Change_Color_CSS('orange')" style="background : rgb(255, 196, 0)"></span>
+                </div>
+            </div>
+            <div class="change-theme">
+                <svg>
+                    <use href="#moon"></use>
+                </svg>
+            </div>
+            <section class="active bg-[gray]" id="home-page">
+                <div class="container-home-page">
+                    <div class="home-page-text">
+                        <h1>رضا حقجو : <span class="type-automatic"> توسعه دهنده فرانت </span></h1><br>
+                        <h2>به وبسایت من <span>خوش آمدید.</span></h2>
+                        <button class="resume-btn">فایل رزومه</button>
+                    </div>
+                    <div class="section-subtitle">home</div>
+                    <div class="home-page-image">
+                        <img src="images/me3.jpg" alt="" onclick="Show_Board(0)">
+                        <img src="images/me2.jpg" alt="" onclick="Show_Board(1)">
+                        <img src="images/me1.jpg" alt="" onclick="Show_Board(2)">
+                        
+                    </div>
+                </div>
+            </section>
+    
+            <section class="bg-[black]" id="about-page">
+                <div class="container-about-page">
+                    <h3>درباره من</h3>
+                    <div class="about-paragraph">
+                        <div>هر انسانی <span>آرزوی بزرگ بودن</span> داره. یکی با برنامه نویسی بزرگ میشه، یکی با هنر و یکی با ورزش :)</div>
+
+                        <div>خیلی خوشحالم که وقت گذاشتید و از سایت بازدید کردید. بنده <span>رضا حقجو</span> ، دانشجوی کارشناسی علوم کامپیوتر در دانشگاه <span>قطب علمی جنوب شرق کشور</span> هستم و از اون دسته انسانهام که تونستم با برنامه نویسی رشد کنم و در حد توانم به کشورم خدمت کنم.</div>
+                        <div>از تفریحات مورد علاقم، ورزش بصورت حرفه ایه و همچنین هر فعالیتی که باعث <span>بهبود مهارت هام</span> در حوزه <span>برنامه نویسی</span> بشه جزو تفریحاتم محصوب میشه.<span>(عاشق یادگیری)</span> همچنین به ندرت به موسیقی گوش میدم. یکی از بهترین موسیقی های عمرم که باعث انگیزه ی بیشتر من میشه و یار همیشه ی دوران سخت زندگیم بوده، آهنگ <span>"من میجنگم"</span> از یاس هست.                  
+                            در کل به آهنگهای یاس علاقه زیادی نشون میدم بخاطر طرز فکر و ادبیات منحصر بفردی که داره باعث میشه محتوای آهنگهاش فوق العاده قدرتمند باشه. 
+                        <audio controls loop style="display: block;margin:40px auto;width : 90%;border : 2px solid black;border-radius : 50px;">
+                            <source src="music/yas_-_man_mijangam.mp3" type="audio/mpeg">
+                            </source>
+                        </audio>
+                        </div>
+                        <div><span>عاشق کارم</span> هستم و یجورایی به کار اعتیاد دارم. طوری <span>به کار معتادم</span> که اگر یک تفریح و یا مسافرت در زندگیم داشته باشم، افسوس میخورم و میگم ای کاش بجای تفریح کار کرده بودم. اسمش نمیدونم افسردگیه یا نه ولی من بهش میگم سخت کوشی (شایدم کمال گرایی). به هر حال باعث میشه <span>تشنه پیشرفت</span> باشم.</div>
+                        <div>به <span>آموزش</span> علاقه شدیدی دارم و دوست دارم <span>تجربیات و توانایی هایی رو</span>  که در طی این مسیر به دست آوردم را با بقیه به اشتراک بزارم. </div>
+                    </div>
+                    <div class="about-img-slider">
+                        <div class="about-img-slider-box">
+                            <img src="images/me1.jpg" alt="">
+                            <div></div>
+                        </div>
+                        <div class="about-img-slider-box about-img-slider-box-2">
+                            <img src="images/me2.jpg" alt="">
+                            <div></div>
+                        </div>
+                        <div class="about-img-slider-box">
+                            <img src="images/me3.jpg" alt="">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+
+
+            <section id="skills-page">
+                <div class="container-skills-page">
+                    <h3>مهارتهای من</h3>
+                    
+                    <div class="container-skills-page-linearNemodar">
+                        <div class="container-skills-page-linearNemodar-container">
+                            <div class="container-skills-page-linearNemodar-container-items">
+                                <h4>HTML</h4>
+                                <div class="container-skills-page-linearNemodar-container-items-nemodar">
+                                    <div data-target="80"></div>
+                                    <span>80%</span>
+                                </div>
+                                
+                            </div>
+
+                            <div class="container-skills-page-linearNemodar-container-items">
+                                <h4>CSS</h4>
+                                <div class="container-skills-page-linearNemodar-container-items-nemodar">
+                                    <div data-target="70"></div>
+                                    <span>70%</span>
+                                </div>
+                            </div>
+
+                            <div class="container-skills-page-linearNemodar-container-items">
+                                <h4>JavaScript</h4>
+                                <div class="container-skills-page-linearNemodar-container-items-nemodar">
+                                    <div data-target="60"></div>
+                                    <span>60%</span>
+                                </div>
+                            </div>
+
+                            <div class="container-skills-page-linearNemodar-container-items">
+                                <h4>Bootstrap</h4>
+                                <div class="container-skills-page-linearNemodar-container-items-nemodar">
+                                    <div data-target="70"></div>
+                                    <span>70%</span>
+                                </div>
+                            </div>
+
+                            <div class="container-skills-page-linearNemodar-container-items">
+                                <h4>TailwindCSS</h4>
+                                <div class="container-skills-page-linearNemodar-container-items-nemodar">
+                                    <div data-target="80"></div>
+                                    <span>80%</span>
+                                </div>
+                            </div>
+
+
+                            <div class="container-skills-page-linearNemodar-container-items">
+                                <h4>ساختمان داده و الگوریتم ها</h4>
+                                <div class="container-skills-page-linearNemodar-container-items-nemodar">
+                                    <div data-target="60"></div>
+                                    <span>60%</span>
+                                </div>
+                            </div>
+
+                            <div class="container-skills-page-linearNemodar-container-items">
+                                <h4>Oracle Apex</h4>
+                                <div class="container-skills-page-linearNemodar-container-items-nemodar">
+                                    <div data-target="60"></div>
+                                    <span>60%</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="container-skills-page-skillsSlider">    
+                        <div class="arrow" id="aside-right">
+                            <i class="fa fa-chevron-right"></i>
+                        </div>
+
+
+                        <div class="container-skills-page-skillsSlider-slider">
+                            <div class="container-skills-page-skillsSlider-slider-item">
+                                <img src="images/1.png" alt="">
+                                <p>HTML</p>
+                            </div>
+                            <div class="container-skills-page-skillsSlider-slider-item">
+                                <img src="images/2.png" alt="">
+                                <p>CSS</p>
+                            </div>
+                            <div class="container-skills-page-skillsSlider-slider-item">
+                                <img src="images/3.png" alt="">
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="container-skills-page-skillsSlider-slider-item">
+                                <img src="images/1.png" alt="">
+                                <p>SASS</p>
+                            </div>
+                            <div class="container-skills-page-skillsSlider-slider-item">
+                                <img src="images/1.png" alt="">
+                                <p>Bootstrap</p>
+                            </div>
+                            <div class="container-skills-page-skillsSlider-slider-item">
+                                <img src="images/1.png" alt="">
+                                <p>TailwindCSS</p>
+                            </div>
+                            <div class="container-skills-page-skillsSlider-slider-item">
+                                <img src="images/6.png" alt="">
+                                <p>Responsive Design</p>
+                            </div>
+                            <div class="container-skills-page-skillsSlider-slider-item">
+                                <img src="images/4.png" alt="">
+                                <p>PHP</p>
+                            </div>
+                            <div class="container-skills-page-skillsSlider-slider-item">
+                                <img src="images/7.png" alt="">
+                                <p>SEO</p>
+                            </div>
+                            <div class="container-skills-page-skillsSlider-slider-item">
+                                <img src="images/7.png" alt="">
+                                <p>C Language</p>
+                            </div>
+                            <div class="container-skills-page-skillsSlider-slider-item">
+                                <img src="images/7.png" alt="">
+                                <p>Java</p>
+                            </div>
+                        </div>
+
+
+                        <div class="arrow" id="aside-left">
+                            <i class="fa fa-chevron-left"></i>
+                        </div>
+                    </div> 
+
+
+
+                    <div class="container-skills-page-historyMe">
+                            <div class="container-skills-page-historyMe-container">
+                                <div class="container-skills-page-historyMe-container-items">
+                                    <h4>شروع تایپ ده انگشتی</h4>
+                                    <span>1400-1401</span>
+                                    <p>از سایت تایپو شروع به تایپ کردم و به مرور زمان در چندین سال به مهارت فوق العاده ای در تایپ فارسی و همچنین انگلیسی بدست آوردم.</p>
+                                </div>
+
+                                <div class="container-skills-page-historyMe-container-items">
+                                    <h4>HTML , CSS</h4>
+                                    <span>1400-1401</span>
+                                    <p>اولین ورود من به برنامه نویسی از اینجا شروع میشه که با سایت فرادرس آشنا شدم و دوره های رایگان اونها رو تماشا کردم. همچنین فقط به فرادرس اکتفا نکردم و با منابع فارسی و انگلیسی خودم رو هرروز بروز می کنم.</p>
+                                </div>
+                                
+                                <div class="container-skills-page-historyMe-container-items">
+                                    <h4>یادگیری JavaScript</h4>
+                                    <span>1401-1402</span>
+                                    <p>یکی از الزامات توسعه دهنده فرانت شدن، آشنایی با جاوا اسکریپت بصورت حرفه ای است. در واقع جاوا اسکریپت قلب تپنده یک سایت محسوب میشه و وظیفه هوشمند کردن سایت رو برعهده داره.</p>
+                                </div>
+
+                                <div class="container-skills-page-historyMe-container-items">
+                                    <h4>آشنایی مقدماتی با PHP , wordpress , SEO , mySQL </h4>
+                                    <span>1401-1402</span>
+                                    <p>با مهارت های بالا آشنایی دارم اما تا الان پروژه ای نزدم. شاید در آینده ای نزدیک تصمیم بگیرم روی مهارت های بالاهم وقت بزارم و به درجه ی مطلوبی برسم.</p>
+                                </div>
+
+                                <div class="container-skills-page-historyMe-container-items">
+                                    <h4>یادگیری مفاهیم و الگوریتم های پایه به زبان c در دانشگاه</h4>
+                                    <span>1402-1403</span>
+                                    <p>در دانشگاه وقتم رو صرف یادگیری عمیق تر الگوریتم های برنامه نویسی و مفاهیم پایه کردم و بهترین زبان برای این هدف زبان c بود.</p>
+                                </div>
+
+                                <div class="container-skills-page-historyMe-container-items">
+                                    <h4>یادگیری BOOTSTRAP , SASS</h4>
+                                    <span>1402-1403</span>
+                                   <p>بوت استرپ یک فریمورک هست که کار رو برای ایجاد برنامه های استاندارد در زمان کمتر، کدنویسی کمتر و خروجی بهتر ارائه داده.</p>
+                                </div>
+
+
+                                <div class="container-skills-page-historyMe-container-items">
+                                    <h4>یادگیری اصول شی گرایی به زبان JAVA</h4>
+                                    <span>1403-1404</span>
+                                   <p>زبان جاوا یک زبان شیرین و همه منظوره جهت تولید برنامه ها برای تمام دستگاه های موجوده که به بهانه درس های دانشگاهی اون رو هم در سال یاد گرفتم.</p>
+                                </div>
+
+
+                                <div class="container-skills-page-historyMe-container-items">
+                                    <h4>یادگیری TailwindCSS</h4>
+                                    <span>1403-1404</span>
+                                   <p>زبان جاوا یک زبان شیرین و همه منظوره جهت تولید برنامه ها برای تمام دستگاه های موجوده که به بهانه درس های دانشگاهی اون رو هم در سال یاد گرفتم.</p>
+                                </div>
+
+                                <div class="container-skills-page-historyMe-container-items">
+                                    <h4>یادگیری Oracle apex</h4>
+                                    <span>1403-1404</span>
+                                   <p>به پیشنهاد شرکت بهبود رایان شروع به یادگیری این مهارت کردم. با استفاده از oracle apex میتوان برنامه هایی با سرعت 20 برابر و کدنویسی کمتر در محیط پایگاه داده انجام داد.</p>
+                                </div>
+
+                                <div class="container-skills-page-historyMe-container-items">
+                                    <h4>این داستان ادامه دارد...</h4>
+                                    </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                
+                
+            </section>
+
+            
+            <section class="bg-[gold]" id="portfolio-page">
+                <div class="container-portfolio-page">
+                    <h3>نمونه کارهای من</h3>
+                    <div class="container-portfolio-page-portfolio">
+                        <div class="container-portfolio-page-portfolio-topic">
+                            <ul>
+                                <li class="active" data-target="all">همه</li>
+                                <li data-target="woocamerce">فروشگاهی</li>
+                                <li data-target="construction">شرکتی</li>
+                                <li data-target="portfolio">شخصی</li>
+                            </ul>
+                        </div>
+                        <div class="container-portfolio-page-portfolio-gallery">
+
+                            <div class="container-portfolio-page-portfolio-gallery-item" data-id="portfolio">
+                                <div class="container-portfolio-page-portfolio-gallery-item-real">
+                                    <img src="images/project3.jpg" alt="">
+                                </div>
+                                <a class="container-portfolio-page-portfolio-gallery-item-opacity" href="#" target="_blank">
+                                    <div class="container-portfolio-page-portfolio-gallery-item-opacity-display">
+                                        <i class="fa fa-eye"></i>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="container-portfolio-page-portfolio-gallery-item" data-id="portfolio">
+                                <div class="container-portfolio-page-portfolio-gallery-item-real">
+                                    <img src="images/project2.jpg" alt="">
+                                </div>
+                                <a class="container-portfolio-page-portfolio-gallery-item-opacity" href="portfolio/Reza Haghjoo/index.html" target="_blank">
+                                    <div class="container-portfolio-page-portfolio-gallery-item-opacity-display">
+                                        <i class="fa fa-eye"></i>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="container-portfolio-page-portfolio-gallery-item" data-id="construction">
+                                <div class="container-portfolio-page-portfolio-gallery-item-real">
+                                    <img src="images/project1.jpg" alt="">
+                                </div>
+                                <a class="container-portfolio-page-portfolio-gallery-item-opacity" href="portfolio/construction-site/index.html" target="_blank">
+                                    <div class="container-portfolio-page-portfolio-gallery-item-opacity-display">
+                                        <i class="fa fa-eye"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="container-portfolio-page-portfolio-gallery-item" data-id="woocamerce">
+                                <div class="container-portfolio-page-portfolio-gallery-item-real">
+                                    <img src="images/project1.jpg" alt="">
+                                </div>
+                                <a class="container-portfolio-page-portfolio-gallery-item-opacity" href="../../bootstrap/New folder/index.html" target="_blank">
+                                    <div class="container-portfolio-page-portfolio-gallery-item-opacity-display">
+                                        <i class="fa fa-eye"></i>
+                                    </div>
+                                </a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section bg-[orange]" id="contact-page">
+                <div class="container-contact-page">
+                    <h3>ارتباط با من</h3>
+                    <div class="container-contact-page-box-container">
+                        <div class="container-contact-page-box">
+                            <i class="fa fa-phone"></i>
+                            <h5 class="contact-box-title">989303494763+</h5>
+                            <p class="contact-box-paragraph">میتوانید از طریق <span>شماره تلفن من </span>  با من در ارتباط باشید.</p>
+                            <button class="contact-box-button" onclick="contact_copy(09303494763)">کپی</button>
+                        </div>
+                        <div class="container-contact-page-box">
+                            <i class="fa fa-envelope-open-o"></i>
+                            <h5 class="contact-box-title">gmail.com</h5>
+                            <p class="contact-box-paragraph">میتوانید از طریق <span>آدرس ایمیل من</span>  با من در ارتباط باشید.</p>
+                            <button class="contact-box-button" onclick="contact_copy('gmail.com')">کپی </button>
+                        </div>
+
+                        <div class="container-contact-page-box">
+                            <i class="fa fa-instagram"></i>
+                            <h5 class="contact-box-title">+989303494763</h5>
+                            <p class="contact-box-paragraph">میتوانید از طریق <span>اینستاگرام من</span>  با من در ارتباط باشید.</p>
+                            <button class="contact-box-button" onclick="contact_copy(09303494763)">کپی </button>
+                        </div>
+
+                        <div class="container-contact-page-box">
+                            <i class="fa fa-telegram"></i>
+                            <h5 class="contact-box-title">+989303494763</h5>
+                            <p class="contact-box-paragraph">میتوانید از طریق <span>تلگرام من</span>  با من در ارتباط باشید.</p>
+                            <button class="contact-box-button" onclick="contact_copy(09303494763)">کپی </button>
+                        </div>
+
+                        <div class="container-contact-page-box">
+                            <i class="fa fa-github"></i>
+                            <h5 class="contact-box-title">+989303494763</h5>
+                            <p class="contact-box-paragraph">میتوانید از طریق <span>گیت هاب من</span>  با من در ارتباط باشید.</p>
+                            <button class="contact-box-button" onclick="contact_copy(09303494763)">کپی </button>
+                        </div>
+
+                        <div class="container-contact-page-box">
+                            <i class="fa fa-linkedin"></i>
+                            <h5 class="contact-box-title">+989303494763</h5>
+                            <p class="contact-box-paragraph">میتوانید از طریق <span>لینکدین من</span>  با من در ارتباط باشید.</p>
+                            <button class="contact-box-button" onclick="contact_copy(09303494763)">کپی </button>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            
+
+        </article>
+    
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+
+::-webkit-scrollbar-thumb{
+    background : red !important;
+}
+.alert{
+    background: red !important;
+    border : 2px solid pink !important;
+}
+li.active{
+    color : red !important;
+    border-bottom : 1px solid red !important;
+}
+.nav-toggle-span{
+    border : 1.5px solid red !important;
+}
+.nav-toggle-span::after{
+    background: red !important;
+}
+.nav-toggle-span::before{
+    background: red !important;
+}
+.nav-toggle.active .nav-toggle-span{
+    border : 1.5px solid rgb(248,250,252) !important;
+}
+.aside-ul li:hover ,.aside-ul li:active{
+    color :red !important;
+}
+.aside a::before{
+    border-right : 5px solid red !important;
+    border-top : 5px solid red !important;
+}
+.aside a::after{
+    border-bottom : 5px solid red !important;
+    border-left : 5px solid red !important;
+}
+.container-home-page .home-page-image img{
+    border : 4px solid red !important;
+}
+.home-page-text h1 span ,.home-page-text h2 span{
+    color : red !important;
+}
+.home-page-text h1 span::after{
+    border-right : 2px solid red !important;
+}
+.resume-btn{
+    background-color: red !important;
+}
+.about-paragraph > div{
+    background: rgb(255, 229, 229) !important;
+}
+.about-paragraph > div > span{
+    color : red !important;
+}
+.about-img-slider-box div{
+    outline : 10px solid red !important;
+}
+.about-img-slider-box div:hover ,.about-img-slider-box div:active{
+    background: rgba(255, 174, 174, 0.615) !important;
+}
+section h3{
+    color : red !important;
+}
+.container-skills-page-linearNemodar-container-items-nemodar div{
+    background: red !important;
+}
+.container-skills-page-historyMe-container-items{
+    border-right : 1px solid red !important;
+} 
+.container-skills-page-historyMe-container-items::before{
+    background: red !important;
+}
+.container-skills-page-historyMe-container-items h4{
+    color : red !important;
+}
+.container-portfolio-page-portfolio-topic ul{
+    border-bottom : 2px solid red !important;
+}
+.container-portfolio-page-portfolio-topic ul li.active{
+    color : white !important;
+    background: red !important;
+}
+.container-portfolio-page-portfolio-topic ul li:hover , .container-portfolio-page-portfolio-topic ul li:active{
+    color : white !important;
+    background: red !important;
+}
+.container-portfolio-page-portfolio-gallery-item{
+    box-shadow : 0px 0px 5px red !important;
+}
+.container-portfolio-page-portfolio-gallery-item-real img{
+    background: red !important;
+}
+.container-portfolio-page-portfolio-gallery-item-opacity{
+    background: rgba(255, 0, 0, 0.3) !important;
+}
+.container-portfolio-page-portfolio-gallery-item-opacity-display{
+    background: red !important;
+}
+.container-contact-page-box:is(:hover,:focus).container-contact-page-box button{
+    color : red !important;
+    background: white !important;
+    box-shadow:inset 0px 0px 8px red !important;
+    transition : all ease-in-out .4s !important;
+    transform: scale(1.1) !important;
+}
+.container-contact-page-box:is(:hover,:focus).container-contact-page-box i{
+    background: red !important;
+    color : white !important;
+    transition : all ease-in-out .4s !important;
+    box-shadow: 0px 0px 5px red !important;
+}
+.container-contact-page-box i{
+    color: red !important;
+}
+.contact-box-paragraph span{
+    color : red !important;
+}
+.container-contact-page-box button{
+    background: red !important;
+}
+#custome-contextmenu{
+    border-block : 3px solid red !important;
+}
+.custome-contextmenu-header{
+    border: 3px solid red !important;
+    border-top : none !important; 
+}
+.social-container ul a{
+    color : red !important;
+    background: rgb(255, 226, 226) !important;
+}
+.social-container ul a:hover ,.social-container ul a:active{
+    background: rgb(255, 159, 159) !important; 
+}
